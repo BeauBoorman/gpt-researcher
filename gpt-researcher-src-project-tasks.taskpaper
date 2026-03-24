@@ -1,0 +1,7 @@
+GPT Researcher Source:
+	Project Understanding:
+		- Identify the current source-level priorities and known local patches @priority(high) @status(pending)
+		- Clarify which issues should be fixed locally versus upstreamed @priority(high) @status(pending)
+		- Surface important code/build/runtime facts into local project truth @priority(medium) @status(pending)
+	Planning:
+		- Define the next concrete source-code milestone @priority(high) @status(pending)

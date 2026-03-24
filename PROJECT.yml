@@ -1,0 +1,14 @@
+version: 1
+name: "GPT Researcher Source"
+description: "Source fork of GPT Researcher — local patches, bugfixes, upstream PR work"
+type: "development"
+status: "active"
+stack:
+  language: "python"
+  runtime: "docker"
+commands:
+  start: "docker compose up -d"
+  stop: "docker compose down"
+  logs: "docker compose logs -f"
+depends_on:
+  - gpt-researcher

@@ -17,6 +17,9 @@ FROM node:18.17.0-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# Bake NEXT_PUBLIC_* env vars into the client bundle at build time
+ARG NEXT_PUBLIC_GPTR_API_URL
+ENV NEXT_PUBLIC_GPTR_API_URL=$NEXT_PUBLIC_GPTR_API_URL
 # Build Next.js application (produces .next)
 RUN npm run build \
 	&& npm prune --production
